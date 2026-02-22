@@ -1,0 +1,119 @@
+/* Плавний скрол */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Центрування */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Header */
+header {
+    background: #003366;
+    color: white;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+main {
+    margin-top: 40px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* Секції */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;   /* було 16px за замовчуванням */
+    line-height: 1.7;
+}
+
+section {
+    padding: 60px 0;
+}
+
+#history {
+    background: #f2f2f2;
+}
+
+#geography {
+    background: #e6f2ff;
+}
+
+#culture {
+    background: #fff5e6;
+}
+
+#gallery {
+    background: #f0f8ff;
+}
+
+/* Галерея */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery figure {
+    margin: 0;
+    text-align: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.gallery figcaption {
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* 2–3 фільтри на кожному */
+
+.img1 { filter: grayscale(30%) contrast(120%); }
+.img2 { filter: brightness(110%) saturate(130%); }
+.img3 { filter: sepia(60%) contrast(110%); }
+.img4 { filter: contrast(140%) brightness(105%); }
+.img5 { filter: grayscale(40%) brightness(115%); }
+.img6 { filter: blur(1px) contrast(130%); }
+.img7 { filter: saturate(150%) brightness(110%); }
+.img8 { filter: contrast(160%) grayscale(20%); }
+
+/* Hover — повернення оригіналу */
+.gallery img:hover {
+    filter: none;
+    transform: scale(1.05);
+}
