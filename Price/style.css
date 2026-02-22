@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f3f7;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 50px 35px;
+    box-shadow: 
+        0 8px 20px rgba(0, 0, 0, 0.06),
+        0 20px 40px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+        0 15px 30px rgba(0, 0, 0, 0.08),
+        0 30px 60px rgba(0, 0, 0, 0.12);
+}
+
+.card h3 {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.card h3::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -35px;     /* дорівнює padding картки */
+    width: calc(100% + 70px);
+    height: 4px;
+}
+
+.card:nth-child(1) h3::after {
+    background: #e74c3c;
+}
+
+.card:nth-child(2) h3::after {
+    background: #f39c12;
+}
+
+.card:nth-child(3) h3::after {
+    background: #2c3eeb;
+}
+
+.card:nth-child(4) h3::after {
+    background: #27ae60;
+}
+
+.card ul {
+    line-height: 1.8;
+    margin: 20px 0 30px;
+}
+
+.price {
+    font-size: 42px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+.period {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.red { background: red; }
+.orange { background: orange; }
+.blue { background: #1a1add; }
+.green { background: #1caa1c; }
